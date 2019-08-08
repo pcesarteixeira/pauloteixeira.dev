@@ -18,6 +18,18 @@ export default function ToggleTheme() {
       setTheme('light')
       window.__setPreferredTheme('light')
     }
+    
+    reloadDisqus()
+  }
+
+  function reloadDisqus() {
+    if (window.DISQUS !== undefined) {
+      window.setTimeout(() => {
+        window.DISQUS.reset({
+          reload: true
+        })
+      }, 300)
+    }
   }
 
   return (

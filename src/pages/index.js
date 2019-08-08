@@ -40,13 +40,6 @@ export const pageQuery = graphql`
             date(formatString: "DD/MM/YYYY")
             title
             description
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
           }
           id
         }
@@ -54,3 +47,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// cover {
+//   childImageSharp {
+//     fluid(maxWidth: 500) {
+//       ...GatsbyImageSharpFluid_noBase64
+//     }
+//   }
+// }

@@ -14,12 +14,12 @@ export default function ListPosts(props) {
           return (
             <S.Post key={node.id}>
               <Link to={node.fields.slug}>
-                <BackgroundImage
+                {/* <BackgroundImage
                   Tag="div"
                   className="cover-card-post"
                   fluid={node.frontmatter.cover.childImageSharp.fluid}
                   backgroundColor={`#040e18`}
-                />
+                /> */}
                 <S.Title>{title}</S.Title>
                 <S.Date className="datetime">{node.frontmatter.date}</S.Date>
                 <S.Description

@@ -6,6 +6,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
 
 collections:
   - name: "posts"
@@ -14,9 +15,9 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "cover", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Data de publicação", name: "date", widget: "datetime"}
+      - {label: "Descrição", name: "description", widget: "text"}
+      - {label: "Artigo em destaque", name: "featuredpost", widget: "boolean"}
+      - {label: "Imagem de capa", name: "cover", widget: image}
+      - {label: "Artigo", name: "body", widget: "markdown"}

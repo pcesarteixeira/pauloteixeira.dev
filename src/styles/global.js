@@ -69,11 +69,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .full-image {
-      img {
-        max-width: 100%;
-        width: 100%;
-        border: 0;
-      }
+      border: 0;
+      max-width: 100%;
+      width: 100%;
 
       & ~ div {
         font-style: italic;

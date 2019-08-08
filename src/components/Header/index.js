@@ -5,9 +5,9 @@ import { Link } from "gatsby"
 import * as S from './styled'
 
 import ToggleTheme from "../ToggleTheme"
-import IconLinkedIn from "../../../content/assets/svg/linkedin.svg"
-import IconTwitter from "../../../content/assets/svg/twitter.svg"
-import IconGithub from "../../../content/assets/svg/github.svg"
+import IconLinkedIn from "../../../static/svg/linkedin.svg"
+import IconTwitter from "../../../static/svg/twitter.svg"
+import IconGithub from "../../../static/svg/github.svg"
 
 export default function Header(props) {
   const data = useStaticQuery(graphql`

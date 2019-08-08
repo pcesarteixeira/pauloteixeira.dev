@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import BackgroundImage from 'gatsby-background-image'
 
 import * as S from './styled'
 
@@ -14,12 +13,7 @@ export default function ListPosts(props) {
           return (
             <S.Post key={node.id}>
               <Link to={node.fields.slug}>
-                {/* <BackgroundImage
-                  Tag="div"
-                  className="cover-card-post"
-                  fluid={node.frontmatter.cover.childImageSharp.fluid}
-                  backgroundColor={`#040e18`}
-                /> */}
+                <S.Cover style={{backgroundImage: `url(${node.frontmatter.cover})`}} />
                 <S.Title>{title}</S.Title>
                 <S.Date className="datetime">{node.frontmatter.date}</S.Date>
                 <S.Description

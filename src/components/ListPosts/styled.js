@@ -19,13 +19,16 @@ export const Posts = styled.div`
   `}
 `
 
-export const Post = styled.div`
-  .cover-card-post {
-    border-radius: 7px;
-    height: 160px;
-    margin-bottom: 10px;
-  }
+export const Cover = styled.div`
+  width: 100%;
+  border-radius: 7px;
+  height: 160px;
+  margin-bottom: 10px;
+  background-position: center;
+  background-size: cover;
+`
 
+export const Post = styled.div`
   a:hover {
     * {
       color: var(--textLink);
@@ -36,13 +39,6 @@ export const Post = styled.div`
       opacity: 1;
     }
   }
-`
-
-export const Cover = styled.div`
-  background-position: center;
-  background-size: cover;
-  height: 180px;
-  width: 100%;
 `
 
 export const Title = styled.h2`

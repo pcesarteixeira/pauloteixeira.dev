@@ -37,6 +37,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            cover
             date(formatString: "DD/MM/YYYY")
             title
             description
@@ -47,11 +48,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// cover {
-//   childImageSharp {
-//     fluid(maxWidth: 500) {
-//       ...GatsbyImageSharpFluid_noBase64
-//     }
-//   }
-// }

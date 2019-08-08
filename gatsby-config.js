@@ -29,7 +29,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: `${__dirname}/content/assets/svg`
+          include: `${__dirname}/static/svg`
         }
       }
     },
@@ -94,7 +94,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#209CEE`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        icon: `static/img/icon.png`,
       },
     },
     `gatsby-plugin-offline`,

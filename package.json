@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "pauloteixeira.dev",
+  "description": "Personal blog Paulo Teixeira",
+  "version": "1.0.0",
+  "author": "Paulo Teixeira",
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^2.13.31",

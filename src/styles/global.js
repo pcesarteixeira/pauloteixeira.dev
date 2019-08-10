@@ -68,8 +68,22 @@ const GlobalStyles = createGlobalStyle`
       overflow: hidden;
     }
 
+    p img {
+      margin: 0 auto;
+      display: block;
+      border-radius: 7px;
+      max-width: 100%;
+      -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+      -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    }
+
+    p strong {
+      color: var(--highlightText);
+    }
+
     .full-image {
-      border: 0;
+      border-radius: 0;
       max-width: 100%;
       width: 100%;
 

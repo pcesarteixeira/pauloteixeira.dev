@@ -18,6 +18,6 @@ Esse blog foi feito com as seguintes tecnologias abaixo, também se tiver intere
 - Netlify para realizar o build e deploy da aplicação.
 - Netlify CMS para escrever e editar artigos em uma interface mais amigável.
 
-Não possuo muito conhecimento por enquanto nessas tecnologias mas a ideia é que eu me aprofunde nos próximos meses nelas, por isso fazer o blog utilizando-as, então caso seja do interesse de vocês posso fazer alguns artigos sobre para ir documentando algumas coisas interessantes que eu for vendo ao decorrer do processo.
+Não possuo muito conhecimento por enquanto nessas tecnologias mas a ideia é que eu me aprofunde nos próximos meses nelas, por isso optei fazer o blog utilizando-as, então possivelmente vai rolar alguns artigos sobre essas tecnologias com o passar o tempo. 😄
 
 Por hora é isso. Até a próxima.

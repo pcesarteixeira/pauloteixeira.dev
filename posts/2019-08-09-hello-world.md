@@ -10,7 +10,7 @@ cover: /img/hello-world-cover.png
 
 <image-cover src="/img/hello-world-fullimage.png" caption="Space"></image-cover>
 
-Meu nome é Paulo Teixeira, tenho 25 anos e atualmente sou desenvolvedor javascript na Rentcars.com. Resolvi criar esse blog para documentar algumas coisas que eu acho interessantes geralmente voltadas para o front-end.
+Meu nome é Paulo Teixeira, tenho 25 anos e atualmente sou desenvolvedor javascript na [Rentcars.com](http://rentcars.com). Resolvi criar esse blog para documentar algumas coisas que eu acho interessantes geralmente voltadas para o front-end.
 
 Esse blog foi feito com as seguintes tecnologias abaixo, também se tiver interesse pode [clicar aqui](https://github.com/pcesarteixeira/pauloteixeira.dev) e ver todo o código no Github, "tá tudo aberto lá".
 

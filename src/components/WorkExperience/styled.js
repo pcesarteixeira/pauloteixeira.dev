@@ -51,6 +51,7 @@ export const TimePlace = styled.div`
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+    order: 2;
   `}
 
   .time {
@@ -71,6 +72,7 @@ export const Image = styled.div`
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+    order: 1;
   `}
 
   img {
@@ -88,6 +90,7 @@ export const PanelDetails = styled.div`
 
   ${media.lessThan("medium")`
     margin-bottom: 20px;
+    order: 3;
   `}
 
   span.techTag {

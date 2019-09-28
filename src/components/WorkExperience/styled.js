@@ -89,21 +89,3 @@ export const PanelDetails = styled.div`
     }
   }
 `
-
-// export const Posts = styled.div`
-//   display: grid;
-//   grid-gap: 30px;
-//   grid-template-columns: repeat(3, 1fr);
-//   padding: 0px 25px 0 25px;
-//   position: relative;
-//   margin: 30px auto 0 auto;
-//   max-width: 1200px;
-
-//   ${media.lessThan("medium")`
-//     grid-template-columns: repeat(1, 1fr);
-//   `}
-
-//   ${media.between("medium", "large")`
-//     grid-template-columns: repeat(2, 1fr);
-//   `}
-// `

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import ListPosts from "../components/ListPosts"
+import WorkExperience from "../components/WorkExperience"
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Todos os artigos" />
         <ListPosts posts={posts} />
+        <WorkExperience />
       </Layout>
     )
   }

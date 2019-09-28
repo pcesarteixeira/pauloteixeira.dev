@@ -13,6 +13,22 @@ export const Works = styled.div`
   margin: 30px auto 0 auto;
   padding: 0px 25px 0 25px;
   max-width: 1200px;
+  position: relative;
+
+  &::after {
+    content: '';
+    background: #e4e4e4;
+    width: 2px;
+    height: calc(100% - 75px);
+    position: absolute;
+    z-index: -1;
+    top: 37.5px;
+    left: 242px;
+  }
+
+  ${media.lessThan("medium")`
+    &::after { display: none; }
+  `}
 `
 
 export const Work = styled.div`
@@ -59,6 +75,10 @@ export const Image = styled.div`
 
   img {
     border: 2px solid #e4e4e4;
+
+    &.active {
+      border-color: var(--textLink);
+    }
   }
 `
 

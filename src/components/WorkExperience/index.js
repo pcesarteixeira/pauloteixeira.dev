@@ -16,6 +16,7 @@ export default function WorkExperience(props) {
           </S.TimePlace>
           <S.Image>
           <img 
+            className="active"
             style={{
               maxWidth: 75,
               maxHeight: 75,

@@ -29,7 +29,7 @@ export default function WorkExperience(props) {
           </S.Image>
           <S.PanelDetails>
             <div className="head-details"><span className="responsibility">Front-end Developer</span> - <a href="http://www.velsis.com.br" target="_blank" className="company">Velsis</a></div>
-            <div>Velsis é uma empresa focada no desenvolvimento de soluções para mobilidade urbana. No momento estou trabalhando com o desenvolvimento de projetos utilizando <span className="techTag">#Angular</span>.</div>
+            <div>Velsis é uma empresa focada no desenvolvimento de soluções para mobilidade urbana. No momento atual trabalho com o desenvolvimento de novos projetos utilizando <span className="techTag">#Angular</span>.</div>
           </S.PanelDetails>
         </S.Work>
 

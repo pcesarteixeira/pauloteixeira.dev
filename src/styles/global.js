@@ -37,6 +37,12 @@ const GlobalStyles = createGlobalStyle`
     background: var(--background);
   }
 
+  hr {
+    width: 300px;
+    margin: 65px auto 59px auto;
+    border: 1px dashed #bcbebc;
+  }
+
   .dark {
     #lg-github { fill: #fff; }
     #lg-linkedin { fill: #fff; }

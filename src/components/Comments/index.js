@@ -8,7 +8,7 @@ const Comments = ({ url, title }) => {
   const completeURL = `https://pauloteixeira.dev${url}`
 
   return (
-    <S.CommentsWrapper>
+    <S.CommentsWrapper id="comments">
       <S.CommentsTitle>Comentários</S.CommentsTitle>
       <ReactDisqusComments
         shortname="paulo-teixeira-blog"

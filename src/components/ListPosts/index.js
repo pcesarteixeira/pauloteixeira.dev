@@ -6,7 +6,18 @@ import * as S from './styled'
 export default function ListPosts(props) {
   return (
     <>
-      <S.TitleSection>Articles</S.TitleSection>
+      <S.TitleSection>
+        <img 
+          style={{
+            maxWidth: 40,
+            maxHeight: 40,
+            marginRight: 10,
+          }}
+          alt="Paulo Teixeira"
+          src="/img/open-book-emoji.png"
+        />
+        Articles
+      </S.TitleSection>
       <S.Posts>
         {props.posts.length > 0 ? (
           props.posts.map(({ node }) => {        

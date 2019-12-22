@@ -7,6 +7,8 @@ export const TitleSection = styled.h2`
   max-width: 1200px;
   font-size: 32px;
   color: var(--highlightText);
+  display: flex;
+  align-items: center;
 `
 
 export const Posts = styled.div`

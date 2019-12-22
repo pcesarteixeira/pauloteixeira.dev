@@ -7,6 +7,8 @@ export const TitleSection = styled.h2`
   max-width: 1200px;
   font-size: 32px;
   color: var(--highlightText);
+  display: flex;
+  align-items: center;
 `
 
 export const Works = styled.div`
@@ -92,6 +94,14 @@ export const PanelDetails = styled.div`
     margin-bottom: 20px;
     order: 3;
   `}
+
+  .main-activities {
+    margin-top: 10px;
+
+    ul {
+      margin-left: 20px;
+    }
+  }
 
   span.techTag {
     font-weight: bold;

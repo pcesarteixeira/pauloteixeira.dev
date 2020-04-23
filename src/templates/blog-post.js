@@ -60,6 +60,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         cover
+        tags
         title
         date(formatString: "DD/MM/YYYY")
         description

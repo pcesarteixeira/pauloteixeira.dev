@@ -26,7 +26,7 @@ export const WrapperToggle = styled.div`
   }
 
   label.swipe {
-    width: 140px;
+    width: 200px;
     background: rgba(0,0,0,.1);
     border-radius: 100px;
     position: relative;

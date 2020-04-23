@@ -4,6 +4,7 @@ date: '2018-08-10T17:40:32.169Z'
 description: >-
   Todo mundo já está cansado de saber das vantagens que frameworks como Bootstrap e Materialize trazem para o desenvolvimento, mas realmente precisamos deles nos dias de hoje?
 featuredpost: false
+tags: ["frontend", "tech"]
 cover: /img/cover-framework-ui.jpg
 ---
 

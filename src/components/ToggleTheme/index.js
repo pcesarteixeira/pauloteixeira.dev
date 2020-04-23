@@ -32,26 +32,20 @@ export default function ToggleTheme() {
     }
   }
 
-  return (
-    <>
-      {theme != null &&
-        <S.WrapperToggle>
-        <input checked={theme === 'dark' ? 'checked' : ''} onChange={handleChangeTheme} type="checkbox" id="theme-change-button" />
-        <label htmlFor="theme-change-button">
-          <div className="circle">
-            <div className="crescent"></div>
-          </div>
-        </label>
-        <label className="swipe" htmlFor="theme-change-button">
-          <div className="toggle"></div>
-          <div className="names">
-            <div className="light">Claro</div>
-            <div className="dark">Escuro</div>
-          </div>
-        </label>
-      </S.WrapperToggle>
-      }
-    </>
-  )
+  return theme != null && <S.WrapperToggle>
+    <input checked={theme === 'dark' ? 'checked' : ''} onChange={handleChangeTheme} type="checkbox" id="theme-change-button" />
+    {/* <label htmlFor="theme-change-button">
+      <div className="circle">
+        <div className="crescent"></div>
+      </div>
+    </label> */}
+    <label className="swipe" htmlFor="theme-change-button">
+      <div className="toggle"></div>
+      <div className="names">
+        <div className="light">Tema claro</div>
+        <div className="dark">Tema escuro</div>
+      </div>
+    </label>
+  </S.WrapperToggle>
   
 }

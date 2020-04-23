@@ -5,6 +5,7 @@ description: >-
   Artigo de apresentação, meu nome é Paulo Teixeira, tenho 25 anos e atualmente
   sou desenvolvedor javascript na Rentcars.com.
 featuredpost: false
+tags: ["personal"]
 cover: /img/hello-world-cover.png
 ---
 

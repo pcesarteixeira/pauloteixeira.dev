@@ -43,18 +43,20 @@ export default function Header(props) {
           <S.LogoLastName>Teixeira</S.LogoLastName>
         </S.Logo>
       </Link>
-      <ToggleTheme />
-      <S.Social>
-        <a className="github" target="_blank" rel="noopener noreferrer" alt={social.github.name} href={`https://github.com/` + social.github.user}>
-          <S.SocialItem><IconGithub /></S.SocialItem>
-        </a>
-        <a className="linkedin" target="_blank" rel="noopener noreferrer" alt={social.linkedin.name} href={`https://linkedin.com/` + social.linkedin.user}>
-          <S.SocialItem><IconLinkedIn /></S.SocialItem>
-        </a>
-        <a className="twitter" target="_blank" rel="noopener noreferrer" alt={social.twitter.name} href={`https://twitter.com/` + social.twitter.user}>
-          <S.SocialItem><IconTwitter /></S.SocialItem>
-        </a>
-      </S.Social>
+      <div style={{ display: 'flex' }}>
+        <ToggleTheme />
+        <S.Social>
+          <a className="github" target="_blank" rel="noopener noreferrer" alt={social.github.name} href={`https://github.com/` + social.github.user}>
+            <S.SocialItem><IconGithub /></S.SocialItem>
+          </a>
+          <a className="linkedin" target="_blank" rel="noopener noreferrer" alt={social.linkedin.name} href={`https://linkedin.com/` + social.linkedin.user}>
+            <S.SocialItem><IconLinkedIn /></S.SocialItem>
+          </a>
+          <a className="twitter" target="_blank" rel="noopener noreferrer" alt={social.twitter.name} href={`https://twitter.com/` + social.twitter.user}>
+            <S.SocialItem><IconTwitter /></S.SocialItem>
+          </a>
+        </S.Social>
+      </div>
     </S.Nav>
   )
 }

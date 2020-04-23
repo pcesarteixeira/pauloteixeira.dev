@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import ListPosts from "../components/ListPosts"
-import WorkExperience from "../components/WorkExperience"
+// import WorkExperience from "../components/WorkExperience"
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,8 +15,8 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Todos os artigos" />
-        <ListPosts posts={posts} />
-        <WorkExperience />
+        <ListPosts title="Últimos artigos" posts={posts} />
+        {/* <WorkExperience /> */}
       </Layout>
     )
   }
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
             date(formatString: "DD/MM/YYYY")
             title
             description
+            tags
           }
           id
         }

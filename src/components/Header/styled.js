@@ -5,9 +5,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px auto;
-  padding: 0 25px;
-  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 20px;
+  max-width: 100%;
+  height: 60px;
 `
 
 export const Logo = styled.div`
@@ -28,11 +29,10 @@ export const LogoFirstName = styled.span`
 
 export const LogoLastName = styled.span`
   color: #b3b3b3;
-
-  ${media.lessThan("medium")`
-    display: none;
-  `}
 `
+  // ${media.lessThan("medium")`
+  //   display: none;
+  // `}
 
 export const Social = styled.div`
   display: flex;

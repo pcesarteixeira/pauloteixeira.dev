@@ -1,5 +1,6 @@
 ---
 title: Você sabe o que é Optimistic UI?
+subtitle: Optimistic UI é um paradigma no desenvolvimento front-end, quando o cliente faz uma solicitação a API atualizamos a interface do usuário de forma otimista, presumindo que a solicitaçào será bem-sucedida.
 date: '2019-11-03T01:10:32.169Z'
 description: >-
   Optimistic UI é um paradigma no desenvolvimento front-end, quando o cliente faz uma solicitação a API atualizamos a interface do usuário de forma otimista, presumindo que a solicitaçào será bem-sucedida.
@@ -7,8 +8,6 @@ featuredpost: false
 tags: ["discuss", "tech"]
 cover: /img/optimisticui.jpg
 ---
-
-> Optimistic UI é um paradigma no desenvolvimento front-end, quando o cliente faz uma solicitação a API atualizamos a interface do usuário de forma otimista, presumindo que a solicitaçào será bem-sucedida.
 
 Esse não é um conceito novo, é amplamente utilizado principalmente por redes sociais que possui varias pequenas interações como curtidas e comentários por exemplo.
 

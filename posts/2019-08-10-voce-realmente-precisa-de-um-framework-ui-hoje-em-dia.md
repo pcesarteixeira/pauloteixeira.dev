@@ -1,5 +1,6 @@
 ---
 title: Você realmente precisa de um framework UI hoje em dia?
+subtitle: Aprenda CSS, não Bootstrap
 date: '2018-08-10T17:40:32.169Z'
 description: >-
   Todo mundo já está cansado de saber das vantagens que frameworks como Bootstrap e Materialize trazem para o desenvolvimento, mas realmente precisamos deles nos dias de hoje?
@@ -85,9 +86,9 @@ Hoje o único problema dessa propriedade que me vem a cabeça é a compatibilida
 
 O Flex foi adotado na versão 4 do Bootstrap, de forma resumida ele é usado para alinhar e redimensionar elementos horizontalmente. Não necessariamente você precisa importar um framework para utilizar deste recurso, ele possui uma sintaxe simples de ser entendida e aplicada, deixo aqui também [esse link em português de um guia completo para flexbox](https://origamid.com/projetos/flexbox-guia-completo/).
 
-## Apreenda CSS, não Bootstrap
+## Aprenda CSS, não Bootstrap
 
-Uma pergunta sempre muito frequente em qualquer comunidade é "Qual tecnologias devo apreender primeiro?", a resposta para isso é: **o básico**. 
+Uma pergunta sempre muito frequente em qualquer comunidade é "Qual tecnologias devo aprender primeiro?", a resposta para isso é: **o básico**. 
 
 Se você quer ser um desenvolvedor front-end, trabalhar com web, você tem que entender coisas como HTML, CSS e Javascript funcionam, Bootstrap, React e Vue.js por exemplo são apenas ferramentas que utilizam dessas tecnologias, elas não existiam até alguns anos atrás e podem ou não morrer com o tempo. 
 

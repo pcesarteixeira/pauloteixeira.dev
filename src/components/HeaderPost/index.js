@@ -26,7 +26,7 @@ export default function HeaderPost(props) {
       <S.Header>
         <S.Tags>{post.frontmatter.tags.map(tag => <span className={tag}>{nameTag(tag)}</span>)}</S.Tags>
         <div className="title">{post.frontmatter.title}</div>
-        <div className="subtitle">Optimistic UI é um paradigma no desenvolvimento front-end, quando o cliente faz uma solicitação a API atualizamos a interface do usuário de forma otimista, presumindo que a solicitaçào será bem-sucedida.</div>
+        <div className="subtitle">{post.frontmatter.subtitle}</div>
       </S.Header>
 
       <S.InfoPost>

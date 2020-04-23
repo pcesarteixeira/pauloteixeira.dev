@@ -62,6 +62,7 @@ export const pageQuery = graphql`
         cover
         tags
         title
+        subtitle
         date(formatString: "DD/MM/YYYY")
         description
       }

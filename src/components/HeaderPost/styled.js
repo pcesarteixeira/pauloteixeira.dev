@@ -11,7 +11,7 @@ export const Header = styled.div`
     font-size: 34px;
     font-weight: bold;
     color: var(--highlightText);
-    line-height: 1.2;
+    line-height: 1;
     margin-bottom: 7px;
 
     ${media.lessThan("small")`
@@ -90,7 +90,7 @@ export const InfoPost = styled.div`
 
       &-name {
         color: var(--textNormal);
-        font-size: 18px;
+        font-size: 16px;
 
         ${media.lessThan("small")`
           font-size: 16px;
@@ -100,9 +100,10 @@ export const InfoPost = styled.div`
       &-date {
         color: var(--textNormal);
         opacity: 0.7;
+        font-size: 12px;
 
         ${media.lessThan("small")`
-          font-size: 14px;
+          font-size: 12px;
         `}
       }
     }
@@ -110,16 +111,19 @@ export const InfoPost = styled.div`
 `
 
 export const Cover = styled.div`
-  margin-top: 20px;
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+  padding: 0 20px;
 
   img {
     width: 100%;
+    border-radius: 8px;
   }
 `
 
 export const HeaderPostWrapper = styled.div`
   margin: 0 auto;
-  padding: 60px 0 60px 0;
+  padding: 60px 0 40px 0;
   width: 100%;
 
   ${media.lessThan("small")`

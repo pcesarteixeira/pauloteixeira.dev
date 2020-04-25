@@ -5,14 +5,13 @@ export const Wrapper = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr) minmax(230px, auto);
-  grid-template-areas: "main main aside";
+  grid-template-areas: "main main main";
   padding: 0 25px;
   margin-bottom: 50px;
 
   ${media.lessThan("medium")`
     grid-template-columns: 1fr;
-    grid-template-areas:  "main"
-                          "aside";
+    grid-template-areas:  "main";
   `}
 
   .main {
@@ -67,7 +66,7 @@ export const Tags = styled.div`
 export const Posts = styled.div`
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   padding: 0px;
   position: relative;
   margin: 15px auto 0 auto;
@@ -135,7 +134,7 @@ export const ListTags = styled.ul`
 
   li {
     .tag {
-      font-family: Arial, Helvetica, sans-serif;
+
       font-size: 28px;
       font-weight: 800;
 

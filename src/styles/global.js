@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Exo:400,700,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
   * {
     margin: 0;
@@ -33,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Open Sans', sans-serif;
     background: var(--background);
   }
 
@@ -147,8 +148,8 @@ const GlobalStyles = createGlobalStyle`
 
     p, ul, ol {
       margin-bottom: 30px;
-      font-size: 20px;
-      line-height: 1.3;
+      font-size: 18px;
+      line-height: 1.4;
     }
 
     ul li p, ul li ul { margin-bottom: 0 }

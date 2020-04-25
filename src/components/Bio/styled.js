@@ -11,7 +11,7 @@ export const BiographyWrapper = styled.div`
 export const BiographyText = styled.div`
   color: var(--textNormal);
   margin-left: 15px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
 
   a { box-shadow: none; }

@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(2, 1fr) minmax(230px, auto);
   grid-template-areas: "main main main";
   padding: 0 25px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 25px;
 
   ${media.lessThan("medium")`
     grid-template-columns: 1fr;
@@ -69,7 +70,7 @@ export const Posts = styled.div`
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   padding: 0px;
   position: relative;
-  margin: 15px auto 0 auto;
+  margin: 0px auto 0 auto;
   max-width: 100%;
 
   ${media.lessThan("medium")`

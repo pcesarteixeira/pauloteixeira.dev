@@ -2,14 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import * as S from './styled'
+import * as S from './Header.style'
 
-import ToggleTheme from "../ToggleTheme"
+import ToggleTheme from "../ToggleTheme/ToggleTheme"
 import IconLinkedIn from "../../../static/svg/linkedin.svg"
 import IconTwitter from "../../../static/svg/twitter.svg"
 import IconGithub from "../../../static/svg/github.svg"
 
-export default function Header(props) {
+export default function Header({ location }) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -32,17 +32,30 @@ export default function Header(props) {
       }
     }
   `)
-
   const { social } = data.site.siteMetadata
+  const [fixedNav, setFixedNav] = React.useState(false)
+  const checkActiveRoute = ({ route }) => route === location.pathname
+
+  React.useEffect(() => {
+    const handleScroll = () => window.pageYOffset > 19 ? setFixedNav(true) : setFixedNav(false)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   
   return (
-    <S.Nav>
-      <Link to="/">
-        <S.Logo>
-          <S.LogoFirstName>Paulo</S.LogoFirstName>
-          <S.LogoLastName>Teixeira</S.LogoLastName>
-        </S.Logo>
-      </Link>
+    <S.Nav className={`${fixedNav && 'shadow'}`}>
+      <div className="menu-links">
+        <Link to="/" style={{ marginRight: 30 }}>
+          <S.Logo>
+            <S.LogoFirstName>Paulo</S.LogoFirstName>
+            <S.LogoLastName>Teixeira</S.LogoLastName>
+          </S.Logo>
+        </Link>
+        {/* <Link to="/" style={{ marginRight: 20 }}><S.Link className={`${checkActiveRoute({ route: '/' }) && 'active'}`}>Artigos</S.Link></Link> */}
+        {/* <Link to="/tips" style={{ marginRight: 20 }}><S.Link className={`${checkActiveRoute({ route: '/tips' }) && 'active'}`}>Dicas</S.Link></Link>
+        <Link to="/career" style={{ marginRight: 20 }}><S.Link className={`${checkActiveRoute({ route: '/career' }) && 'active'}`}>Carreira</S.Link></Link> */}
+      </div>
       <div style={{ display: 'flex' }}>
         <ToggleTheme />
         <S.Social>

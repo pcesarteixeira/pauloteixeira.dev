@@ -35,9 +35,8 @@ export default function ListPosts(props) {
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper className="a">
       <div className="main">
-        <S.TitleSection>{props.title}</S.TitleSection>
         <S.Posts>
           {props.posts.length > 0 ? (
             props.posts.map(({ node }) => {        

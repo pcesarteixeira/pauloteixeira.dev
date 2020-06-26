@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import rehypeReact from 'rehype-react'
 
 import Bio from "../components/Bio"
-import Layout from "../components/Layout"
+import LayoutBase from "../layouts/LayoutBase/LayoutBase"
 import SEO from "../components/Seo"
 import HeaderPost from "../components/HeaderPost"
 import ImageCover from "../components/ImageCover"
@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <LayoutBase location={this.props.location} title={siteTitle}>
         
         <SEO
           title={post.frontmatter.title}
@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
         <RecommendedPosts next={next} previous={previous} />
         <Comments url={post.fields.slug} title={post.frontmatter.title} />
 
-      </Layout>
+      </LayoutBase>
     )
   }
 }

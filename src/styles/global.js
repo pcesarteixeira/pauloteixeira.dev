@@ -2,12 +2,13 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Exo:400,700,800&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600,900&display=swap');
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
   }
 
   body.light {
@@ -19,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     --inlineCode-text: #1a1a1a;
     --backgroundComments: rgba(0,0,0,.04);
     --backgroundRecommended: rgba(0,0,0,.04);
+    --backgroundNavbar: #ffffff;
   }
 
   body.dark {
@@ -31,11 +33,21 @@ const GlobalStyles = createGlobalStyle`
     --inlineCode-text: #e6e6e6;
     --backgroundComments: #15181d;
     --backgroundRecommended: #1c2027;
+    --backgroundNavbar: #373b43;
   }
 
-  html, body {
-    font-family: 'Open Sans', sans-serif;
+  html, body, #___gatsby, #gatsby-focus-wrapper {
+    height: 100%;
     background: var(--background);
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .main-wrapper {
+    min-height: calc(100% - 58px);
+    box-shadow: 0 0px 7px rgba(0,0,0,0.10);
   }
 
   hr {
@@ -61,9 +73,11 @@ const GlobalStyles = createGlobalStyle`
     color: var(--textLink);
   }
 
-  .bio-footer {
-    margin: 90px auto 30px auto;
-    max-width: 500px;
+  .content {
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1200px;
   }
 
   .post-content {

@@ -78,7 +78,7 @@ export const Image = styled.div`
   `}
 
   img {
-    border: 2px solid #e4e4e4;
+    border: 4px solid #e4e4e4;
 
     &.active {
       border-color: var(--textLink);

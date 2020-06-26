@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../_components/Layout"
-import SEO from "../_components/Seo"
-import ListPosts from "../_components/ListPosts"
-import WorkExperience from "../_components/WorkExperience"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import ListPosts from "../components/ListPosts"
+import WorkExperience from "../components/WorkExperience"
 
 import LayoutBase from "../layouts/LayoutBase/LayoutBase"
-import SliderPost from "../_components/SliderPost/SliderPost"
 
 
 class BlogIndex extends React.Component {
@@ -17,9 +16,16 @@ class BlogIndex extends React.Component {
     const posts = data.posts.edges
 
     return <LayoutBase location={this.props.location}>
-      <SEO title="Todos os artigos" />
-      <ListPosts title="Últimos artigos" posts={posts} />
+      <SEO title="Carreira" />
+      <div>career</div>
     </LayoutBase>
+
+      // <Layout location={this.props.location} title={siteTitle}>
+        // <SEO title="Todos os artigos" />
+        {/* <ListPosts title="Últimos artigos" posts={posts} />
+        <WorkExperience /> */}
+      // </Layout>
+    // )
   }
 }
 

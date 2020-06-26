@@ -6,9 +6,25 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0px auto;
-  padding: 0 20px;
+  padding: 25px;
   max-width: 100%;
-  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--backgroundNavbar);
+  z-index: 99;
+
+  &.shadow {
+    background: var(--backgroundNavbar);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px -8px;
+    transition: box-shadow 300ms ease-in-out 0s;
+  }
+
+  .menu-links {
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const Logo = styled.div`
@@ -20,6 +36,21 @@ export const Logo = styled.div`
   
   &:hover {
     opacity: 0.6;
+  }
+`
+
+export const Link = styled.div`
+  font-size: 18px;
+  line-height: 1;
+  color: var(--textNormal);
+
+  &.active {
+    font-weight: bold;
+    color: var(--highlightText);
+  }
+
+  &:hover {
+    color: var(--highlightText);
   }
 `
 

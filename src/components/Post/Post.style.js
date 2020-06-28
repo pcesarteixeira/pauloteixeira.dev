@@ -369,8 +369,7 @@ export const Profile = styled.div`
     margin-left: -25px;
     margin-top: -25px;
     width: calc(100% + 50px);
-    border-bottom: 1px solid var(--borderColorProfileMobile);
-    border-top: 1px solid var(--borderColorProfileMobile);
+    background: var(--borderColorProfileMobile);
   `}
 
   .picture {
@@ -430,7 +429,7 @@ export const Share = styled.div`
 
   .title {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 5px;
     color: var(--normalText);
     margin-bottom: 10px;
@@ -468,6 +467,7 @@ export const Comments = styled.div`
     font-size: 14px;
     color: var(--normalText);
     text-decoration: none;
+    font-weight: 600;
   }
 
   &:hover {    

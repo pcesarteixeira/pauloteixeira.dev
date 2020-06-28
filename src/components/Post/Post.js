@@ -19,7 +19,6 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 export default function LayoutPost({ post }) {
-  const windowGlobal = typeof window !== 'undefined' && window
   const images = useStaticQuery(graphql`
     query {
       profile: file(relativePath: { eq: "profile-pc.jpg" }) {
@@ -33,7 +32,9 @@ export default function LayoutPost({ post }) {
   `)
 
   const [fixedaside, setFixedaside] = React.useState(false)
-
+  const [enabledShareAPI, setEnabledShareAPI] = React.useState(false)
+  
+  React.useEffect(() => setEnabledShareAPI('share' in navigator), [])
   React.useEffect(() => {
     const handleScroll = () => {
       window.pageYOffset > 87 ? setFixedaside(true) : setFixedaside(false)
@@ -42,16 +43,14 @@ export default function LayoutPost({ post }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const share = () => {
-    if (windowGlobal.navigator.share !== undefined) {
-      windowGlobal.navigator.share({
-        title: post.frontmatter.title,
-        text: post.excerpt,
-        url: `https://pauloteixeira.dev${post.fields.slug}`,
-      })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
+  async function share() {
+    const shareData = {
+      title: post.frontmatter.title,
+      text: post.excerpt,
+      url: `https://pauloteixeira.dev${post.fields.slug}`,
     }
+
+    await navigator.share(shareData)
   }
 
   return <React.Fragment>
@@ -75,16 +74,16 @@ export default function LayoutPost({ post }) {
           </S.Profile>
 
           <S.Share>
-            {windowGlobal && windowGlobal.navigator && !windowGlobal.navigator.hasOwnProperty('share')
-              ? <React.Fragment>
+            {enabledShareAPI
+              ? <button onClick={() => share()} className="share-post-mobile">Clique aqui para compartilhar</button>
+              : <React.Fragment>
                   <div className="title">Compartilhe esse artigo</div>
                   <div className="networks">
                     <a aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://twitter.com/intent/tweet?url=https://pauloteixeira.dev${post.fields.slug}&text=${post.frontmatter.title}&via=pcesarteixeira`}><IconTwitter className="twitter" /></a>
                     <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pauloteixeira.dev${post.fields.slug}`}><IconLinkedIn className="linkedin" /></a>
                     <a aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.facebook.com/sharer/sharer.php?u=https://pauloteixeira.dev${post.fields.slug}`} ><IconFacebook className="facebook" /></a>
                   </div>
-                </React.Fragment>
-              : <button onClick={() => share()} className="share-post-mobile">Clique aqui para compartilhar</button>}
+                </React.Fragment>}
           </S.Share>
 
           <AnchorLink

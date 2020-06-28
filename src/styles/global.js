@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
     --iconNavbar: #333;
     --borderColorHoverCard: #8c8c8c;
     --colorTextFooter: rgba(0,0,0,0.4);
-    --borderColorProfileMobile: #c6c6c6;
+    --borderColorProfileMobile: #ececec;
     --backgroundButtonShare: #dadada;
   }
 
@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     --backgroundFooter: #000;
     --borderColorHoverCard: #424242;
     --colorTextFooter: rgba(255,255,255,0.4);
-    --borderColorProfileMobile: #242424;
+    --borderColorProfileMobile: #1a1a1a;
     --backgroundButtonShare: #242424;
   }
 `

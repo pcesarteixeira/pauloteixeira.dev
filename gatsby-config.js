@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -100
+        offset: -80
       }
     },
     {
@@ -106,9 +106,10 @@ module.exports = {
         name: `Paulo Teixeira`,
         short_name: `pauloteixeira`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: `minimal-ui`,
+        background_color: `#000000`,
+        lang: `pt_br`,
+        theme_color: `#000000`,
+        display: `standalone`,
         icon: `static/img/icon.png`,
       },
     },

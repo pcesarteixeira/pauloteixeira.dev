@@ -109,7 +109,7 @@ module.exports = {
         background_color: `#000000`,
         lang: `pt_br`,
         theme_color: `#000000`,
-        display: `standalone`,
+        display: `fullscreen`,
         icon: `static/img/icon.png`,
       },
     },

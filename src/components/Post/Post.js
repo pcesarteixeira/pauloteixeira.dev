@@ -43,8 +43,8 @@ export default function LayoutPost({ post }) {
   }, [])
 
   const share = () => {
-    if (navigator.share !== undefined) {
-      navigator.share({
+    if (window.navigator.share !== undefined) {
+      window.navigator.share({
         title: post.frontmatter.title,
         text: post.excerpt,
         url: `https://pauloteixeira.dev${post.fields.slug}`,
@@ -75,7 +75,7 @@ export default function LayoutPost({ post }) {
           </S.Profile>
 
           <S.Share>
-            {!navigator.share 
+            {!window.navigator.share 
               ? <React.Fragment>
                   <div className="title">Compartilhe esse artigo</div>
                   <div className="networks">

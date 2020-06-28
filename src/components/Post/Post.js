@@ -75,7 +75,7 @@ export default function LayoutPost({ post }) {
           </S.Profile>
 
           <S.Share>
-            {!windowGlobal.navigator.share 
+            {!windowGlobal.navigator.hasOwnProperty('share')
               ? <React.Fragment>
                   <div className="title">Compartilhe esse artigo</div>
                   <div className="networks">

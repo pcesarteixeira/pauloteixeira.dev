@@ -5,14 +5,20 @@ module.exports = {
     description: `Blog pessoal de Paulo Teixeira`,
     siteUrl: `https://pauloteixeira.dev/`,
     social: {
-      twitter: { name: 'Twitter', user: 'pcesarteixeira' },
-      linkedin: { name: 'LinkedIn', user: 'in/pcesarteixeira' },
-      github: { name: 'GitHub', user: 'pcesarteixeira' },
+      twitter: { name: 'Twitter', user: 'pcesarteixeira', link: 'https://twitter.com/pcesarteixeira' },
+      linkedin: { name: 'LinkedIn', user: 'in/pcesarteixeira', link: 'https://linkedin.com/in/pcesarteixeira' },
+      // github: { name: 'GitHub', user: 'pcesarteixeira', link: 'https://github.com/pcesarteixeira' },
     }
   },
   plugins: [
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

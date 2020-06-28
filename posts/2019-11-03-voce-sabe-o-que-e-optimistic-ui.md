@@ -39,11 +39,11 @@ Estamos em 2019 e apesar de ser muito utilizado por grande aplicações, você f
 Existem diversos estudos e testes A/B de como uma simples cor no botão pode influenciar positivamente ou negativamente a conversão em uma loja virtual. **Agora imagine o quanto se pode ganhar com a implementação desse padrão de interação (Optimistic UI) onde o usuário terá a sensação de velocidade e fluidez aumentada.** 
 
 
+
+
+
+
 <!-- 
-
-
-
-
 Todo mundo já está cansado de saber das vantagens que frameworks como Bootstrap e Materialize trazem para o desenvolvimento, mas realmente precisamos deles nos dias de hoje? 
 
 Quem me conhece um pouco que seja sabe do meu posicionamento contrário em relação ao uso do Bootstrap. Acredito que ele traz mais desvantagens do que vantagens em “determinadas” aplicações, então vamos direto ao ponto. 
@@ -77,7 +77,7 @@ Falarei dele por ser um dos principais argumentos como ponto positivo quando fal
 ```html{5,10}
 <div class="container">
   <div class="row">
-    <div class="col col-lg-4 col-md-6 col-sm-12">elemento 1</div>
+    <div class="col col-lg-4 col-md-6 col-sm-12">elemento 1</div><div <div <div <div class="col col-lg-4 col-md-6 col-sm-12">elemento 1</div>
     <div class="col col-lg-8 col-md-6 col-sm-12">elemento 2</div>
       
   </div>

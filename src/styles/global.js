@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-wrapper {
-    min-height: calc(100% - 58px);
+    min-height: calc(100% - 62px);
     box-shadow: 0 0px 7px rgba(0,0,0,0.10);
   }
 

@@ -15,6 +15,10 @@ export const Posts = styled.div`
   padding: 0;
   padding-bottom: 80px;
 
+  ${media.lessThan("medium")`
+    padding: 5px;
+  `}
+
   .post {
     text-decoration: none;
     cursor: pointer;
@@ -29,6 +33,7 @@ export const Posts = styled.div`
 
     ${media.lessThan("medium")`
       flex-direction: column;
+      padding: 20px;
     `}
 
     &:hover {

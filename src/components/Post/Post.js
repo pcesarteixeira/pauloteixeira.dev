@@ -19,6 +19,7 @@ const renderAst = new rehypeReact({
 }).Compiler
 
 export default function LayoutPost({ post }) {
+  const windowGlobal = typeof window !== 'undefined' && window
   const images = useStaticQuery(graphql`
     query {
       profile: file(relativePath: { eq: "profile-pc.jpg" }) {
@@ -35,7 +36,6 @@ export default function LayoutPost({ post }) {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      console.log(window.pageYOffset)
       window.pageYOffset > 87 ? setFixedaside(true) : setFixedaside(false)
     }
     window.addEventListener('scroll', handleScroll)
@@ -43,8 +43,8 @@ export default function LayoutPost({ post }) {
   }, [])
 
   const share = () => {
-    if (window.navigator.share !== undefined) {
-      window.navigator.share({
+    if (windowGlobal.navigator.share !== undefined) {
+      windowGlobal.navigator.share({
         title: post.frontmatter.title,
         text: post.excerpt,
         url: `https://pauloteixeira.dev${post.fields.slug}`,
@@ -75,7 +75,7 @@ export default function LayoutPost({ post }) {
           </S.Profile>
 
           <S.Share>
-            {!window.navigator.share 
+            {!windowGlobal.navigator.share 
               ? <React.Fragment>
                   <div className="title">Compartilhe esse artigo</div>
                   <div className="networks">

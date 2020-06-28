@@ -9,16 +9,14 @@ export default function ListPosts({ posts }) {
     <S.Title className="content">Últimos artigos</S.Title>
 
     <S.Posts className="content">
-      {posts.map(({ node }) => <React.Fragment>
-        <Link key={node.id} className="post" to={node.fields.slug}>
-          <div className="post__image" style={{backgroundImage: `url(${node.frontmatter.cover})`}}></div>
-          <div className="post__info">
-            <div className="post__info-timetoread"><span>{node.frontmatter.date}</span> - {node.timeToRead} minuto{node.timeToRead > 1 ? 's' : ''} de leitura</div>
-            <div className="post__info-title">{node.frontmatter.title}</div>
-            <div className="post__info-excerpt">{node.excerpt}</div>
-          </div>
-        </Link>
-      </React.Fragment>)}
+      {posts.map(({ node }) => <Link key={node.id} className="post" to={node.fields.slug}>
+        <div className="post__image" style={{backgroundImage: `url(${node.frontmatter.cover})`}}></div>
+        <div className="post__info">
+          <div className="post__info-timetoread"><span>{node.frontmatter.date}</span> - {node.timeToRead} minuto{node.timeToRead > 1 ? 's' : ''} de leitura</div>
+          <div className="post__info-title">{node.frontmatter.title}</div>
+          <div className="post__info-excerpt">{node.excerpt}</div>
+        </div>
+      </Link>)}
     </S.Posts>
   </React.Fragment>
 }

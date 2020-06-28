@@ -79,9 +79,9 @@ export default function LayoutPost({ post }) {
               ? <React.Fragment>
                   <div className="title">Compartilhe esse artigo</div>
                   <div className="networks">
-                    <a target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://twitter.com/intent/tweet?url=https://pauloteixeira.dev${post.fields.slug}&text=${post.frontmatter.title}&via=pcesarteixeira`}><IconTwitter className="twitter" /></a>
-                    <a target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pauloteixeira.dev${post.fields.slug}`}><IconLinkedIn className="linkedin" /></a>
-                    <a target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.facebook.com/sharer/sharer.php?u=https://pauloteixeira.dev${post.fields.slug}`} ><IconFacebook className="facebook" /></a>
+                    <a aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://twitter.com/intent/tweet?url=https://pauloteixeira.dev${post.fields.slug}&text=${post.frontmatter.title}&via=pcesarteixeira`}><IconTwitter className="twitter" /></a>
+                    <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pauloteixeira.dev${post.fields.slug}`}><IconLinkedIn className="linkedin" /></a>
+                    <a aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.facebook.com/sharer/sharer.php?u=https://pauloteixeira.dev${post.fields.slug}`} ><IconFacebook className="facebook" /></a>
                   </div>
                 </React.Fragment>
               : <button onClick={() => share()} className="share-post-mobile">Clique aqui para compartilhar</button>}

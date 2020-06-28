@@ -34,6 +34,7 @@ export default function ToggleTheme() {
 
   return theme != null && <S.WrapperToggle>
     <input checked={theme === 'dark' ? 'checked' : ''} onChange={handleChangeTheme} type="checkbox" id="theme-change-button" />
+    {/* eslint-disable */}
     <label className="swipe" htmlFor="theme-change-button">
       <div className="toggle"></div>
       <div className="names">

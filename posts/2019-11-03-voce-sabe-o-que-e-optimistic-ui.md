@@ -44,7 +44,7 @@ Isso abre diversas possibilidades para implementar em seu projeto. Em uma PWA (p
 
 Antes de aplicar esse conceito em seu projeto é importante entender os tempos de resposta de cada um dos endpoints do seu servidor. Talvez não seja interessante utilizar endpoints que tem tempo de resposta superior a 2 segundos.
 
-Uma interface do usuário otimista não se trata apenas de botões e envio de mensagens (chats). A abordagem pode ser aplicada a diferentes interações e eventos durante o ciclo de vida de uma página, incluindo o carregamento da página. No Facebook por exemplo se você acessar seu feed e rolar para o fim da pagina você vai perceber que antes de recebermos do servidor o conteúdo das publicações é renderizado a estrutura da postagem com espaços reservados para o conteúdo assim que receber os resultados.
+Uma interface do usuário otimista não se trata apenas de botões e envio de mensagens (chats). A abordagem pode ser aplicada a diferentes interações e eventos durante o ciclo de vida de uma página, incluindo o carregamento da página. No Facebook por exemplo se você acessar seu feed e rolar para o fim da pagina você vai perceber que antes de recebermos do servidor o conteúdo das publicações é renderizado a estrutura da postagem com espaços reservados para o conteúdo quando a requisição for concluída.
 
 **Optimistic UI** não é uma novidade na internet, nem é uma técnica particularmente avançada. É apenas um modelo mental para ajudar a gerenciar o desempenho percebido do seu produto. Baseando-se nos aspectos psicológicos da interação humano-computador, quando usado de maneira inteligente pode ajudar a criar experiências melhores e mais contínuas nas aplicações, além de exigir muito pouco para implementar.
 

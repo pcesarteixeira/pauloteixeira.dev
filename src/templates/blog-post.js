@@ -8,8 +8,6 @@ import LayoutPost from "../components/Post/Post"
 class BlogPostTemplate extends React.Component {
   render() {
     const { post } = this.props.data
-    // const siteTitle = this.props.data.site.siteMetadata.title
-    // const { previous, next } = this.props.pageContext
 
     return <React.Fragment>
       <LayoutBase location={this.props.location}>

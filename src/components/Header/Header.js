@@ -15,6 +15,11 @@ export default function Header({ location }) {
       site {
         siteMetadata {
           social {
+            github {
+              name
+              user
+              link
+            }
             linkedin {
               name
               user

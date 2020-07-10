@@ -7,7 +7,7 @@ module.exports = {
     social: {
       twitter: { name: 'Twitter', user: 'pcesarteixeira', link: 'https://twitter.com/pcesarteixeira' },
       linkedin: { name: 'LinkedIn', user: 'in/pcesarteixeira', link: 'https://linkedin.com/in/pcesarteixeira' },
-      // github: { name: 'GitHub', user: 'pcesarteixeira', link: 'https://github.com/pcesarteixeira' },
+      github: { name: 'GitHub', user: 'pcesarteixeira', link: 'https://github.com/pcesarteixeira' },
     }
   },
   plugins: [
@@ -24,13 +24,6 @@ module.exports = {
       options: {
         path: `${__dirname}/posts`,
         name: `posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/tips`,
-        name: `tips`,
       },
     },
     {

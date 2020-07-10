@@ -27,33 +27,6 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-      tips: 
-        allMarkdownRemark(
-          sort: {
-            fields: [frontmatter___date], 
-            order: DESC
-          }, 
-          limit: 1000, 
-          filter: {frontmatter: {type: {eq: "tip"}}}
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      pagesTips: allMarkdownRemark(limit: 1000, filter: {frontmatter: {type: {eq: "tip"}}}) {
-        group(field: frontmatter___category) {
-          totalCount
-          fieldValue
-        }
-        totalCount
-      }
     }
     `
   )
@@ -63,8 +36,6 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const posts = result.data.posts.edges
-  const tips = result.data.tips.edges
-  const pagesTips = result.data.pagesTips.group
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -80,31 +51,6 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-  pagesTips.forEach(pageTip => {
-    createPage({
-      path: `/tips/${pageTip.fieldValue}`,
-      component: path.resolve(`./src/templates/page-list-tips.js`),
-      context: {
-        slug: pageTip.fieldValue
-      }
-    })
-  })
-
-  // tips.forEach((post, index) => {
-  //   const previous = index === posts.length - 1 ? null : posts[index + 1].node
-  //   const next = index === 0 ? null : posts[index - 1].node
-
-  //   createPage({
-  //     path: post.node.fields.slug,
-  //     component: path.resolve(`./src/templates/blog-post.js`),
-  //     context: {
-  //       slug: post.node.fields.slug,
-  //       previous,
-  //       next,
-  //     },
-  //   })
-  // })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

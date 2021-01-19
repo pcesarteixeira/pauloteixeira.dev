@@ -31,17 +31,9 @@ export default function LayoutPost({ post }) {
     }
   `)
 
-  const [fixedaside, setFixedaside] = React.useState(false)
   const [enabledShareAPI, setEnabledShareAPI] = React.useState(false)
   
   React.useEffect(() => setEnabledShareAPI('share' in navigator), [])
-  React.useEffect(() => {
-    const handleScroll = () => {
-      window.pageYOffset > 87 ? setFixedaside(true) : setFixedaside(false)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   async function share() {
     const shareData = {
@@ -55,56 +47,35 @@ export default function LayoutPost({ post }) {
 
   return <React.Fragment>
     <S.Wrapper className="content">
-      <div className="aside">
-
-        <Link className="back-home" to="/" style={{ textDecoration: 'none', borderBottom: 'none' }}>
-          <S.BackListPosts>
-            <IconBack className="icon" />
-            <div className="label">Ver lista de artigos</div>
-          </S.BackListPosts>
-        </Link>
-
-        <div className={`${fixedaside && 'fixed-aside'}`}>
-          <S.Profile>
-            <Img className="picture" fluid={images.profile.childImageSharp.fluid} />
-            <div className="info">
-              <div className="info__name">Paulo Teixeira</div>
-              <div className="info__bio">Desenvolvedor javascript atualmente vivendo e trabalhando em Curitiba.</div>
-            </div>
-          </S.Profile>
-
-          <S.Share>
-            {enabledShareAPI
-              ? <button onClick={() => share()} className="share-post-mobile">Clique aqui para compartilhar</button>
-              : <React.Fragment>
-                  <div className="title">Compartilhe esse artigo</div>
-                  <div className="networks">
-                    <a aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://twitter.com/intent/tweet?url=https://pauloteixeira.dev${post.fields.slug}&text=${post.frontmatter.title}&via=pcesarteixeira`}><IconTwitter className="twitter" /></a>
-                    <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pauloteixeira.dev${post.fields.slug}`}><IconLinkedIn className="linkedin" /></a>
-                    <a aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="networks__item" href={`https://www.facebook.com/sharer/sharer.php?u=https://pauloteixeira.dev${post.fields.slug}`} ><IconFacebook className="facebook" /></a>
-                  </div>
-                </React.Fragment>}
-          </S.Share>
-
-          <AnchorLink
-            style={{ borderBottom: 0, textDecoration: 'none' }}
-            to={`${post.fields.slug}#comments`}
-            title="Comente esse artigo"
-            className="comments-link"
-            stripHash
-          >
-            <S.Comments>
-              <IconComment className="icon" />
-              <div className="label">Comente esse artigo</div>
-            </S.Comments>
-          </AnchorLink>
-        </div>
-
-      </div>
       <div className="main post">
-        <div className="post__timetoread">Publicado em <span>{post.frontmatter.date}</span> - {post.timeToRead} minuto{post.timeToRead > 1 ? 's' : ''} de leitura</div>
+        
         <h1 className="post__title">{post.frontmatter.title}</h1>
         <div className="post__subtitle">{post.frontmatter.subtitle}</div>
+        <div className="post__publish">
+          <div className="post__publish-avatar">
+            <Img className="picture" fluid={images.profile.childImageSharp.fluid} />
+          </div>
+          <div className="post__publish-info">
+            <div className="post__publish-info-name">Paulo Teixeira</div>
+            <div className="post__publish-info-timetoread">Publicado em <span>{post.frontmatter.date}</span></div>
+            <div className="post__publish-info-timetoread">{post.timeToRead} minuto{post.timeToRead > 1 ? 's' : ''} de leitura</div>
+          </div>
+          <div className="post__share">
+            {enabledShareAPI
+              ? <button onClick={() => share()} className="share-post-mobile">Clique aqui para compartilhar</button>
+              : <>
+                  <div className="post__share-title">Compartilhe esse artigo</div>
+                  <div className="post__share-networks">
+                    <a aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="post__share-networks-item" href={`https://twitter.com/intent/tweet?url=https://pauloteixeira.dev${post.fields.slug}&text=${post.frontmatter.title}&via=pcesarteixeira`}><IconTwitter className="twitter" /></a>
+                    <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="post__share-networks-item" href={`https://www.linkedin.com/shareArticle?mini=true&url=https://pauloteixeira.dev${post.fields.slug}`}><IconLinkedIn className="linkedin" /></a>
+                    <a aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="post__share-networks-item" href={`https://www.facebook.com/sharer/sharer.php?u=https://pauloteixeira.dev${post.fields.slug}`} ><IconFacebook className="facebook" /></a>
+                  </div>  
+                </>}
+          </div>
+          
+          
+
+        </div>
         <div className="post__content">{renderAst(post.htmlAst)}</div>
         <div id="comments" className="post__comments-title">Comente esse artigo</div>
         <div className="post__comments-component">

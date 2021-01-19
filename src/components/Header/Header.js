@@ -40,7 +40,7 @@ export default function Header({ location }) {
   const [fixedNav, setFixedNav] = React.useState(false)
 
   React.useEffect(() => {
-    const handleScroll = () => window.pageYOffset > 0 ? setFixedNav(true) : setFixedNav(false)
+    const handleScroll = () => window.pageYOffset > 60 ? setFixedNav(true) : setFixedNav(false)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -67,20 +67,6 @@ export default function Header({ location }) {
           </S.Logo>
 
           <S.SocialAndNightMode>
-            <div className="social">
-              {Object.keys(social).map((network, key) => <a 
-                key={key}
-                className="social__network-item" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                alt={social[network].name} 
-                href={social[network].link}
-              >
-                <S.SocialItem className={network}>
-                  <RenderingIconSocial social={network} />
-                </S.SocialItem>
-              </a>)}
-            </div>
             <ToggleTheme />
           </S.SocialAndNightMode>
           

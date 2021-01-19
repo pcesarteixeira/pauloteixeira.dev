@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 
 export const SocialAndNightMode = styled.div`
   display: flex;
+  height: 25px;
 
   .social {
     display: flex;

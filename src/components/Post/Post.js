@@ -2,14 +2,12 @@ import React from 'react'
 import Img from "gatsby-image"
 import rehypeReact from 'rehype-react'
 import ReactDisqusComments from 'react-disqus-comments'
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import IconLinkedIn from "../../../static/svg/linkedin-color.svg"
 import IconTwitter from "../../../static/svg/twitter.svg"
 import IconFacebook from "../../../static/svg/facebook.svg"
-import IconComment from "../../../static/svg/comment.svg"
-import IconBack from "../../../static/svg/back.svg"
+
 import * as S from './Post.style'
 
 const renderAst = new rehypeReact({

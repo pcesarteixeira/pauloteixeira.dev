@@ -1,42 +1,11 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
 import * as S from './Header.style'
 
 import ToggleTheme from "../ToggleTheme/ToggleTheme"
-import IconLinkedIn from "../../../static/svg/linkedin.svg"
-import IconTwitter from "../../../static/svg/twitter.svg"
-import IconGithub from "../../../static/svg/github.svg"
 
 export default function Header({ location }) {
-  const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      site {
-        siteMetadata {
-          social {
-            github {
-              name
-              user
-              link
-            }
-            linkedin {
-              name
-              user
-              link
-            }
-            twitter {
-              name
-              user
-              link
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const { social } = data.site.siteMetadata
   const [fixedNav, setFixedNav] = React.useState(false)
 
   React.useEffect(() => {
@@ -44,15 +13,6 @@ export default function Header({ location }) {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const RenderingIconSocial = ({ social }) => {
-    switch (social) {
-      case 'linkedin': return <IconLinkedIn />
-      case 'twitter': return <IconTwitter />
-      case 'github': return <IconGithub />
-      default: return false
-    }
-  }
   
   return (
     <S.Nav className={`${fixedNav && 'shadow'}`}>

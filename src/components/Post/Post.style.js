@@ -96,7 +96,6 @@ export const Wrapper = styled.div`
     }
 
     .post {
-
       &__timetoread {
         line-height: 1;
         margin-bottom: 0px;
@@ -107,10 +106,13 @@ export const Wrapper = styled.div`
           letter-spacing: 1px;
         }
       }
+
       &__title {
         font-size: 42px;
         color: var(--highlightText);
         margin: 0;
+        line-height: 1;
+        margin-bottom: 15px;
         
         ${media.lessThan("medium")`
           font-size: 32px;
@@ -296,6 +298,7 @@ export const Wrapper = styled.div`
 
           p {
             border-left: 5px solid #d2d2d2;
+            padding-left: 20px;
           }
         }
 
@@ -456,6 +459,10 @@ export const Wrapper = styled.div`
           overflow: auto;
           font-size: 16px;
           max-width: calc(100% + 1.3125rem + 1.3125rem);
+
+          * {
+            font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace !important;
+          }
         }
 
         @media (max-width: 672px) {

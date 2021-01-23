@@ -43,6 +43,7 @@ const GlobalStyles = createGlobalStyle`
     --colorTextFooter: rgba(0,0,0,0.4);
     --borderColorProfileMobile: #ececec;
     --backgroundButtonShare: #dadada;
+    --backgroundProgressbar: rgba(0,0,0,0.07);
   }
 
   body.dark {
@@ -56,6 +57,7 @@ const GlobalStyles = createGlobalStyle`
     --colorTextFooter: rgba(255,255,255,0.4);
     --borderColorProfileMobile: #1a1a1a;
     --backgroundButtonShare: #242424;
+    --backgroundProgressbar: rgba(255,255,255,0.2);
   }
 `
 

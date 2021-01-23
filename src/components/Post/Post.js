@@ -12,14 +12,17 @@ import * as S from './Post.style'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  // components: { 'image-cover': ImageCover },
   components: {},
 }).Compiler
 
 export default function LayoutPost({ post }) {
+  const [fixedProgressbar, setFixedProgressbar] = React.useState(false)
+  const [enabledShareAPI, setEnabledShareAPI] = React.useState(false)
+  const [percentageRead, setPercentageRead] = React.useState(0)
+  
   const images = useStaticQuery(graphql`
     query {
-      profile: file(relativePath: { eq: "profile-pc.jpg" }) {
+      profile: file(relativePath: { eq: "personal.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 250, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -29,9 +32,19 @@ export default function LayoutPost({ post }) {
     }
   `)
 
-  const [enabledShareAPI, setEnabledShareAPI] = React.useState(false)
-  
   React.useEffect(() => setEnabledShareAPI('share' in navigator), [])
+
+  React.useEffect(() => {
+    const comments = document.querySelector('#comments')
+    const handleScroll = () => {
+      window.pageYOffset > 87 ? setFixedProgressbar(true) : setFixedProgressbar(false)
+      const totalPercentage = (window.pageYOffset * 100) / comments.offsetTop
+      setPercentageRead(totalPercentage > 100 ? 100 : totalPercentage)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   async function share() {
     const shareData = {
@@ -46,7 +59,11 @@ export default function LayoutPost({ post }) {
   return <React.Fragment>
     <S.Wrapper className="content">
       <div className="main post">
-        
+        <div className={`progress-bar ${fixedProgressbar && 'progress-bar--fixed'}`}>
+          <div className="progress-bar__background">
+            <div className="progress-bar__bar-complete" style={{ height: `${percentageRead}%` }} />
+          </div>
+        </div>
         <h1 className="post__title">{post.frontmatter.title}</h1>
         <div className="post__subtitle">{post.frontmatter.subtitle}</div>
         <div className="post__publish">
@@ -70,11 +87,8 @@ export default function LayoutPost({ post }) {
                   </div>  
                 </>}
           </div>
-          
-          
-
         </div>
-        <div className="post__content">{renderAst(post.htmlAst)}</div>
+        <div id="content-post" className="post__content">{renderAst(post.htmlAst)}</div>
         <div id="comments" className="post__comments-title">Comente esse artigo</div>
         <div className="post__comments-component">
           <ReactDisqusComments
@@ -82,7 +96,7 @@ export default function LayoutPost({ post }) {
             identifier={`https://pauloteixeira.dev${post.fields.slug}`}
             title={post.frontmatter.title}
             url={`https://pauloteixeira.dev${post.fields.slug}`}
-        />
+          />
         </div>
       </div>
     </S.Wrapper>

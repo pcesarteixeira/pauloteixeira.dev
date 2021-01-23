@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 150px !important;
 
   ${media.lessThan("medium")`
     flex-direction: column;
@@ -41,6 +41,38 @@ export const Wrapper = styled.div`
   }
 
   .main {
+    position: relative;
+
+    .progress-bar {
+      width: 8px;
+      height: 200px;
+      position: absolute;
+      left: -55px;
+      display: flex;
+      justify-content: flex-end;
+
+      &--fixed {
+        position: fixed;
+        left: auto;
+        margin-left: -55px;
+        top: 140px;
+      }
+
+      &__background {
+        background: var(--backgroundProgressbar);
+        width: 8px;
+        height: 200px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      &__bar-complete {
+        width: 100%;
+        height: 40px;
+        background: #4ad870;
+      }
+    }
+
     flex: 1;
     width: 100%;
     max-width: 700px;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Paulo Teixeira</title>
+    <meta name="description" content="Paulo Teixeira's personal page.">
+    <meta name="keywords" content="Paulo Teixeia">
+    <meta name="author" content="Paulo Teixeira">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile {
+            display: flex;
+            font-size: 16px;
+            line-height: 1.1;
+            align-items: center;
+        }
+
+        .profile__avatar {
+            width: 56px;
+            height: 56px;
+            margin-right: 15px;
+            border-radius: 28px;
+        }
+
+        .profile__person-name {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .profile__person-email {
+            opacity: .5;
+        }
+
+        .profile__person-email a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .profile__person-email a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="personal.jpg" alt="Personal photo of Paulo Teixeira" title="Personal photo of Paulo Teixeira" class="profile__avatar" />
+        <div class="profile__person">
+            <div class="profile__person-name">Paulo Teixeira</div>
+            <div class="profile__person-email"><a title="Send an email" href="mailto:paulo@pauloteixeira.dev" target="_blank">paulo@pauloteixeira.dev</a></div>
+        </div>
+    </div>
+</body>
+</html>
